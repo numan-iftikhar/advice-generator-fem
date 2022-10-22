@@ -27,13 +27,16 @@
               darkBlue: "hsl(218, 23%, 16%)",
             },
           },
+          boxShadow: {
+        '3xl': '0 0 30px hsl(150, 100%, 66%)',
+      }
         },
       };
     </script>
   </head>
   <body class="flex flex-col items-center justify-center min-h-screen relative bg-darkBlue">
 
-    <main class="w-72 md:w-96 text-center bg-darkGrayishBlue p-5 pb-16 rounded-lg">
+    <main class="w-72 md:w-96 text-center bg-darkGrayishBlue px-8 py-4 pb-16 rounded-lg">
       <h1 class="text-neonGreen uppercase text-sm tracking-widest my-4">Advice #<span class="advice-number">01</span></h1>
 
       <p class="advice-text mb-6 text-white text-lightCyan font-bold text-2xl">
@@ -51,12 +54,14 @@
       </picture>
 
       <div class="relative flex justify-center">
-        <button class="btn mt-5 bg-neonGreen p-4 rounded-full absolute top-4">
+        <button class="btn mt-5 bg-neonGreen p-4 rounded-full absolute top-4 hover:shadow-3xl">
           <img src="images/icon-dice.svg" />
         </button>
 
       </div>
     </main>
+
+
 
     <footer class="attribution absolute bottom-0 mb-2 text-lightCyan text-sm">
       Challenge by

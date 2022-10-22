@@ -1,28 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>Advice generator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Advice generator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              lightCyan: "hsl(193, 38%, 86%)",
+              neonGreen: "hsl(150, 100%, 66%)",
+              grayishBlue: "hsl(217, 19%, 38%)",
+              darkGrayishBlue: "hsl(217, 19%, 24%)",
+              darkBlue: "hsl(218, 23%, 16%)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="flex flex-col items-center justify-center min-h-screen relative bg-darkBlue">
 
-  Advice #<!-- Advice ID goes here -->
+    <main class="w-72 md:w-96 text-center bg-darkGrayishBlue p-5 pb-16 rounded-lg">
+      <h1 class="text-neonGreen uppercase text-sm tracking-widest my-4">Advice # <span class="advice-number"></span></h1>
 
-  "<!-- Advice text goes here -->"
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
-</body>
+      <p class="advice-text mb-6 text-white text-lightCyan font-bold text-2xl">
+        "It is easy to sit up and take notice, what's difficult is getting up
+        and taking action."
+      </p>
+
+      <picture class="pattern-divider">
+        <source
+          media="(min-width:768px)"
+          srcset="./images/pattern-divider-desktop.svg"
+        />
+
+        <img src="./images/pattern-divider-mobile.svg" alt="Flowers" />
+      </picture>
+
+      <div class="relative flex justify-center">
+        <button class="mt-5 bg-neonGreen p-4 rounded-full absolute top-4">
+          <img src="images/icon-dice.svg" />
+        </button>
+
+      </div>
+    </main>
+
+    <footer class="attribution absolute bottom-0 mb-2 text-lightCyan text-sm">
+      Challenge by
+      <a class="text-sky-500" href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a class="text-sky-500" href="#">Numan Iftikhar</a>.
+    </footer>
+  </body>
 </html>
